@@ -2,10 +2,11 @@
 	margin: 0;
 	padding: 0;
 }
-
+// HEADER STYLES ==================================
 #header {
 	position: fixed;
 	width: 100%;
+	z-index: 1;
 	.header-top {
 		height: 60px;
 		background: #000;
@@ -43,8 +44,8 @@
 		font-size: 20px;
 	}
 }
-
-#content {
+// CONTENT STYLES ==================================
+#content, .menu-wrapper {
 	max-width: 1160px;
 	margin: 0 auto;
 	padding: 124px 20px 0 20px;
@@ -60,4 +61,26 @@
     white-space: nowrap;
     text-overflow: ellipsis;
     text-align: center;
+    background: yellow;
 }
+// DOWNLOAD MENU STYLES ==================================
+.save-menu {
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	background: red;
+	z-index: 1;
+}
+#menu-wrapper {
+	height: 0;
+	padding-top: 0;
+	padding-bottom: 0;
+	overflow: hidden;
+	transition: all 0.4s ease;
+	line-height: 64px;
+	background: lightgreen;
+}
+
+#ico {float: left;}
+#save {float: right;}
