@@ -1,18 +1,20 @@
 var show = false;
+//var selectColor = '#E0E0E0';
 var lastID = 0;
 function showMenu(iconID) {
 	if (iconID == lastID) {
 		document.getElementById('menu-wrapper').style.height = "0";
+//		document.getElementsByClassName('ic-block')[iconID-1].style.background = 'transparent';
 		lastID = 0;
 	} else {
-		document.getElementById('menu-wrapper').style.height = "64px";
+		document.getElementById('menu-wrapper').style.height = "96px";
+//		document.getElementsByClassName('ic-block')[iconID-1].style.background = selectColor;
 		lastID = iconID;
 	}
 	switch (iconID) {
 		case 1:
 			document.getElementById('load-icon').src = 'png/icon1.png';
 			document.getElementById('load-name').innerHTML = 'First icon';
-			document.getElementById('load').href = 'png/icon1.png';
 			document.getElementsByClassName('load')[0].href = 'svg/icon1.svg';
 			document.getElementsByClassName('load')[1].href = 'png/icon1.png';
 			break;
