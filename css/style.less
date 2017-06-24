@@ -79,11 +79,36 @@
 	z-index: 1;
 }
 #menu-wrapper {
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	height: 0;
 	padding-top: 0;
 	padding-bottom: 0;
 	overflow: hidden;
 	transition: all 0.4s ease;
-	line-height: 96px;
 	text-align: center;
+	div:first-child {
+		margin-right: 48px;
+		img {margin-right: 15px;}
+	}
+	.load {
+		width: 84px;
+		height: 36px;
+		border: 1px solid;
+		border-radius: 4px;
+		line-height: 36px;
+		text-decoration: none;
+		&.main {
+			margin-right: 12px;
+			background-color: #3B69F2;
+			border-color: #3B69F2;
+			color: #fff;
+		}
+		&.secondary {
+			background-color: #fff;
+			border-color: rgba(0,0,0,0.4);
+			color: rgba(0,0,0,0.8);
+		}
+	}
 }
