@@ -1,14 +1,15 @@
 var show = false;
-//var selectColor = '#E0E0E0';
+var selectColor = '#E0E0E0';
 var lastID = 0;
 function showMenu(iconID) {
 	if (iconID == lastID) {
 		document.getElementById('menu-wrapper').style.height = "0";
-//		document.getElementsByClassName('ic-block')[iconID-1].style.background = 'transparent';
+		document.getElementsByClassName('ic-block')[lastID-1].style.background = 'transparent';
 		lastID = 0;
 	} else {
 		document.getElementById('menu-wrapper').style.height = "96px";
-//		document.getElementsByClassName('ic-block')[iconID-1].style.background = selectColor;
+		if (lastID !== 0) {document.getElementsByClassName('ic-block')[lastID-1].style.background = 'transparent';}
+		document.getElementsByClassName('ic-block')[iconID-1].style.background = selectColor;
 		lastID = iconID;
 	}
 	switch (iconID) {
