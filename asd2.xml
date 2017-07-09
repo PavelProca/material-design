@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<icons>
+	<icon>
+		<id>1</id>
+		<name>First Icon</name>
+		<svgpath>svg/icon1.svg</svgpath>
+		<pngpath>png/icon1.png</pngpath>
+	</icon>
+	<icon>
+		<id>2</id>
+		<name>Second Icon</name>
+		<svgpath>svg/icon2.svg</svgpath>
+		<pngpath>png/icon2.png</pngpath>
+	</icon>
+	<icon>
+		<id>3</id>
+		<name>Third Icon</name>
+		<svgpath>svg/icon3.svg</svgpath>
+		<pngpath>png/icon3.png</pngpath>
+	</icon>
+	<icon>
+		<id>4</id>
+		<name>Fourth Icon</name>
+		<svgpath>svg/icon4.svg</svgpath>
+		<pngpath>png/icon4.png</pngpath>
+	</icon>
+	<icon>
+		<id>5</id>
+		<name>Fifth Icon</name>
+		<svgpath>svg/icon5.svg</svgpath>
+		<pngpath>png/icon5.png</pngpath>
+	</icon>
+	
+
+
+
+</icons>

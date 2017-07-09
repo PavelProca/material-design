@@ -12,25 +12,9 @@ function showMenu(iconID) {
 		document.getElementsByClassName('ic-block')[iconID-1].style.background = selectColor;
 		lastID = iconID;
 	}
-	switch (iconID) {
-		case 1:
-			document.getElementById('load-icon').src = 'png/icon1.png';
-			document.getElementById('load-name').innerHTML = 'First icon';
-			document.getElementsByClassName('load')[0].href = 'svg/icon1.svg';
-			document.getElementsByClassName('load')[1].href = 'png/icon1.png';
-			break;
-		case 2:
-			document.getElementById('load-icon').src = 'png/icon2.png';
-			document.getElementById('load-name').innerHTML = 'Second icon';
-			document.getElementsByClassName('load')[0].href = 'svg/icon2.svg';
-			document.getElementsByClassName('load')[1].href = 'png/icon2.png';
-			break;
-		case 3:
-			document.getElementById('load-icon').src = 'png/icon3.png';
-			document.getElementById('load-name').innerHTML = 'Third icon';
-			document.getElementsByClassName('load')[0].href = 'svg/icon3.svg';
-			document.getElementsByClassName('load')[1].href = 'png/icon3.png';
-			break;
-		default: return;
-	}
-}
+	
+	document.getElementById('load-icon').src = xmlDoc.getElementsByTagName("svgpath")[iconID-1].childNodes[0].nodeValue;
+	document.getElementById('load-name').innerHTML = xmlDoc.getElementsByTagName("name")[iconID-1].childNodes[0].nodeValue;
+	document.getElementsByClassName('load')[0].href = xmlDoc.getElementsByTagName("svgpath")[iconID-1].childNodes[0].nodeValue;
+	document.getElementsByClassName('load')[1].href = xmlDoc.getElementsByTagName("pngpath")[iconID-1].childNodes[0].nodeValue;
+};

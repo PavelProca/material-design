@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html>
-<head>
+<head meta="utf-8">
 	<title>Material icons</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 	<script type="text/javascript" src="js/script.js"></script>
 	<script type="text/javascript" src="js/bootstrap.min.js"></script>
@@ -23,7 +25,7 @@
 				    <path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/>
 				    <path d="M0 0h24v24H0z" fill="none"/>
 				</svg>
-				<input type="text" placeholder="Start Typing Icon’s Name…">
+				<input type="text" placeholder="Start Typing Icon’s Name…" id="src-field">
 			</div>
 		</div>
 	</div>
@@ -31,213 +33,14 @@
 	<div id="content" class="container">
 		<!-- ROW WITH ICONS -->
 		<div class="row row-capt">Work icon</div>
-		<div class="row">
-
+		<div class="row" id="icon-row">
+			<!--
 			<div class="ic-wrapper col-md-1 col-sm-2 col-xs-3">
 				<div class="ic-block" onClick="showMenu(1)" title="First Icon">
 					<img src="svg/icon1.svg">
 				</div>
 			</div>
-			<div class="ic-wrapper col-md-1 col-sm-2 col-xs-3">
-				<div class="ic-block" onClick="showMenu(2)" title="Second Icon">
-					<img src="svg/icon2.svg">
-				</div>
-			</div>
-			<div class="ic-wrapper col-md-1 col-sm-2 col-xs-3">
-				<div class="ic-block" onClick="showMenu(3)" title="Third Icon">
-					<img src="svg/icon3.svg">
-				</div>
-			</div>
-			<div class="ic-wrapper col-md-1 col-sm-2 col-xs-3">
-				<div class="ic-block" onClick="showMenu(4)">
-					<img src="svg/icon2.svg">
-				</div>
-			</div>
-			<div class="ic-wrapper col-md-1 col-sm-2 col-xs-3">
-				<div class="ic-block" onClick="showMenu(5)">
-					<img src="svg/icon2.svg">
-				</div>
-			</div>
-			<div class="ic-wrapper col-md-1 col-sm-2 col-xs-3">
-				<div class="ic-block" onClick="showMenu(6)">
-					<img src="svg/icon2.svg">
-				</div>
-			</div>
-			<div class="ic-wrapper col-md-1 col-sm-2 col-xs-3">
-				<div class="ic-block" onClick="showMenu(7)">
-					<img src="svg/icon2.svg">
-				</div>
-			</div>
-			<div class="ic-wrapper col-md-1 col-sm-2 col-xs-3">
-				<div class="ic-block" onClick="showMenu(8)">
-					<img src="svg/icon2.svg">
-				</div>
-			</div>
-			<div class="ic-wrapper col-md-1 col-sm-2 col-xs-3">
-				<div class="ic-block" onClick="showMenu(9)">
-					<img src="svg/icon2.svg">
-				</div>
-			</div>
-			<div class="ic-wrapper col-md-1 col-sm-2 col-xs-3">
-				<div class="ic-block" onClick="showMenu(10)">
-					<img src="svg/icon2.svg">
-				</div>
-			</div>
-			<div class="ic-wrapper col-md-1 col-sm-2 col-xs-3">
-				<div class="ic-block" onClick="showMenu(11)">
-					<img src="svg/icon2.svg">
-				</div>
-			</div>
-			<div class="ic-wrapper col-md-1 col-sm-2 col-xs-3">
-				<div class="ic-block" onClick="showMenu(12)">
-					<img src="svg/icon2.svg">
-				</div>
-			</div>
-			<div class="ic-wrapper col-md-1 col-sm-2 col-xs-3">
-				<div class="ic-block" onClick="showMenu(13)">
-					<img src="svg/icon2.svg">
-				</div>
-			</div>
-			<div class="ic-wrapper col-md-1 col-sm-2 col-xs-3">
-				<div class="ic-block" onClick="showMenu(14)">
-					<img src="svg/icon2.svg">
-				</div>
-			</div>
-			<div class="ic-wrapper col-md-1 col-sm-2 col-xs-3">
-				<div class="ic-block" onClick="showMenu(15)">
-					<img src="svg/icon2.svg">
-				</div>
-			</div>
-			<div class="ic-wrapper col-md-1 col-sm-2 col-xs-3">
-				<div class="ic-block" onClick="showMenu(16)">
-					<img src="svg/icon2.svg">
-				</div>
-			</div>
-			<div class="ic-wrapper col-md-1 col-sm-2 col-xs-3">
-				<div class="ic-block" onClick="showMenu(17)">
-					<img src="svg/icon2.svg">
-				</div>
-			</div>
-			<div class="ic-wrapper col-md-1 col-sm-2 col-xs-3">
-				<div class="ic-block" onClick="showMenu(18)">
-					<img src="svg/icon2.svg">
-				</div>
-			</div>
-			<div class="ic-wrapper col-md-1 col-sm-2 col-xs-3">
-				<div class="ic-block" onClick="showMenu(19)">
-					<img src="svg/icon2.svg">
-				</div>
-			</div>
-			<div class="ic-wrapper col-md-1 col-sm-2 col-xs-3">
-				<div class="ic-block" onClick="showMenu(20)">
-					<img src="svg/icon2.svg">
-				</div>
-			</div>
-			<div class="ic-wrapper col-md-1 col-sm-2 col-xs-3">
-				<div class="ic-block" onClick="showMenu(21)">
-					<img src="svg/icon2.svg">
-				</div>
-			</div>
-			<div class="ic-wrapper col-md-1 col-sm-2 col-xs-3">
-				<div class="ic-block" onClick="showMenu(22)">
-					<img src="svg/icon2.svg">
-				</div>
-			</div>
-			<div class="ic-wrapper col-md-1 col-sm-2 col-xs-3">
-				<div class="ic-block" onClick="showMenu(23)">
-					<img src="svg/icon2.svg">
-				</div>
-			</div>
-			<div class="ic-wrapper col-md-1 col-sm-2 col-xs-3">
-				<div class="ic-block" onClick="showMenu(24)">
-					<img src="svg/icon2.svg">
-				</div>
-			</div>
-			<div class="ic-wrapper col-md-1 col-sm-2 col-xs-3">
-				<div class="ic-block" onClick="showMenu(25)">
-					<img src="svg/icon2.svg">
-				</div>
-			</div>
-			<div class="ic-wrapper col-md-1 col-sm-2 col-xs-3">
-				<div class="ic-block" onClick="showMenu(26)">
-					<img src="svg/icon2.svg">
-				</div>
-			</div>
-			<div class="ic-wrapper col-md-1 col-sm-2 col-xs-3">
-				<div class="ic-block" onClick="showMenu(27)">
-					<img src="svg/icon2.svg">
-				</div>
-			</div>
-			<div class="ic-wrapper col-md-1 col-sm-2 col-xs-3">
-				<div class="ic-block" onClick="showMenu(28)">
-					<img src="svg/icon2.svg">
-				</div>
-			</div>
-			<div class="ic-wrapper col-md-1 col-sm-2 col-xs-3">
-				<div class="ic-block" onClick="showMenu(29)">
-					<img src="svg/icon2.svg">
-				</div>
-			</div>
-			<div class="ic-wrapper col-md-1 col-sm-2 col-xs-3">
-				<div class="ic-block" onClick="showMenu(30)">
-					<img src="svg/icon2.svg">
-				</div>
-			</div>
-			<div class="ic-wrapper col-md-1 col-sm-2 col-xs-3">
-				<div class="ic-block" onClick="showMenu(31)">
-					<img src="svg/icon2.svg">
-				</div>
-			</div>
-			<div class="ic-wrapper col-md-1 col-sm-2 col-xs-3">
-				<div class="ic-block" onClick="showMenu(32)">
-					<img src="svg/icon2.svg">
-				</div>
-			</div>
-			<div class="ic-wrapper col-md-1 col-sm-2 col-xs-3">
-				<div class="ic-block" onClick="showMenu(33)">
-					<img src="svg/icon2.svg">
-				</div>
-			</div>
-			<div class="ic-wrapper col-md-1 col-sm-2 col-xs-3">
-				<div class="ic-block" onClick="showMenu(34)">
-					<img src="svg/icon2.svg">
-				</div>
-			</div>
-			<div class="ic-wrapper col-md-1 col-sm-2 col-xs-3">
-				<div class="ic-block" onClick="showMenu(35)">
-					<img src="svg/icon2.svg">
-				</div>
-			</div>
-			<div class="ic-wrapper col-md-1 col-sm-2 col-xs-3">
-				<div class="ic-block" onClick="showMenu(36)">
-					<img src="svg/icon2.svg">
-				</div>
-			</div>
-			<div class="ic-wrapper col-md-1 col-sm-2 col-xs-3">
-				<div class="ic-block" onClick="showMenu(37)">
-					<img src="svg/icon2.svg">
-				</div>
-			</div>
-			<div class="ic-wrapper col-md-1 col-sm-2 col-xs-3">
-				<div class="ic-block" onClick="showMenu(38)">
-					<img src="svg/icon2.svg">
-				</div>
-			</div>
-			<div class="ic-wrapper col-md-1 col-sm-2 col-xs-3">
-				<div class="ic-block" onClick="showMenu(39)">
-					<img src="svg/icon2.svg">
-				</div>
-			</div>
-			<div class="ic-wrapper col-md-1 col-sm-2 col-xs-3">
-				<div class="ic-block" onClick="showMenu(40)">
-					<img src="svg/icon2.svg">
-				</div>
-			</div>
-
-			
-			
-
-			
+			-->
 			
 		</div>
 	</div>
@@ -252,5 +55,39 @@
 			<a href="png/icon1.png" download class="load secondary">PNG</a>
 		</div>
 	</div>
+<script type="text/javascript">
+	var parentElem = document.getElementById('icon-row');
+
+
+	if (window.XMLHttpRequest) {
+		xmlhttp = new XMLHttpRequest();
+	} else {
+		xmlhttp = ActiveXObject("Microsoft.XMLHTTP");
+	};
+
+	xmlhttp.open("GET", "asd2.xml", false);
+	xmlhttp.send();
+	xmlDoc=xmlhttp.responseXML;
+
+	var x = xmlDoc.getElementsByTagName("icon");
+
+	for (var i = 0; i < x.length; i++) {
+		var icWrapper = document.createElement('div');
+		var icBlock = document.createElement('div');
+		var image = document.createElement('img');
+		icWrapper.className = 'ic-wrapper col-md-1 col-sm-2 col-xs-3';
+		icBlock.className = 'ic-block';
+
+		parentElem.insertBefore(icWrapper, parentElem.lastChild);
+		icWrapper.insertBefore(icBlock, icWrapper.lastChild);
+		icBlock.id = xmlDoc.getElementsByTagName("id")[i].childNodes[0].nodeValue;
+		icBlock.insertBefore(image, icBlock.firstChild);	
+		image.src = xmlDoc.getElementsByTagName("svgpath")[i].childNodes[0].nodeValue; 
+		
+	}
+
+	$('.ic-block').on('click', function () { showMenu(this.id); });
+
+</script>
 </body>
 </html>
