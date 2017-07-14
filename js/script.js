@@ -4,12 +4,12 @@ var lastID = 0;
 function showMenu(iconID) {
 	if (iconID == lastID) {
 		document.getElementById('menu-wrapper').style.height = "0";
-		document.getElementsByClassName('ic-block')[lastID-1].style.background = 'transparent';
+		document.getElementById(iconID).style.background = 'transparent';
 		lastID = 0;
 	} else {
 		document.getElementById('menu-wrapper').style.height = "96px";
-		if (lastID !== 0) {document.getElementsByClassName('ic-block')[lastID-1].style.background = 'transparent';}
-		document.getElementsByClassName('ic-block')[iconID-1].style.background = selectColor;
+		if (lastID !== 0) {document.getElementById(lastID).style.background = 'transparent';}
+		document.getElementById(iconID).style.background = selectColor;
 		lastID = iconID;
 	}
 	

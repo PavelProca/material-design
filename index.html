@@ -32,16 +32,15 @@
 	<!-- ************************************ MAIN CONTENT SECTION ************************************ -->
 	<div id="content" class="container">
 		<!-- ROW WITH ICONS -->
+		<!--
 		<div class="row row-capt">Work icon</div>
 		<div class="row" id="icon-row">
-			<!--
 			<div class="ic-wrapper col-md-1 col-sm-2 col-xs-3">
 				<div class="ic-block" onClick="showMenu(1)" title="First Icon">
 					<img src="svg/icon1.svg">
 				</div>
 			</div>
-			-->
-			
+		-->
 		</div>
 	</div>
 	<!-- HIDDEN DOWNLOAD MENU -->
@@ -56,9 +55,9 @@
 		</div>
 	</div>
 <script type="text/javascript">
-	var parentElem = document.getElementById('icon-row');
-
-
+	// GET MAIN ROW WITH ICONS
+	var parentElem = document.getElementById('content');
+	// OPEN XML FILE
 	if (window.XMLHttpRequest) {
 		xmlhttp = new XMLHttpRequest();
 	} else {
@@ -69,23 +68,34 @@
 	xmlhttp.send();
 	xmlDoc=xmlhttp.responseXML;
 
-	var x = xmlDoc.getElementsByTagName("icon");
+	// MAKE ROWS WITH ICONS
+	var group = xmlDoc.getElementsByTagName("icons-group");
 
-	for (var i = 0; i < x.length; i++) {
-		var icWrapper = document.createElement('div');
-		var icBlock = document.createElement('div');
-		var image = document.createElement('img');
-		icWrapper.className = 'ic-wrapper col-md-1 col-sm-2 col-xs-3';
-		icBlock.className = 'ic-block';
+	for (var i = 0; i < group.length; i++) {
+		var gruopName = document.createElement('div');
+		gruopName.className = 'row row-capt';
+		var gruopRow = document.createElement('div');
+		gruopRow.className = 'row';
+		var icons =  group[i].children;
 
-		parentElem.insertBefore(icWrapper, parentElem.lastChild);
-		icWrapper.insertBefore(icBlock, icWrapper.lastChild);
-		icBlock.id = xmlDoc.getElementsByTagName("id")[i].childNodes[0].nodeValue;
-		icBlock.insertBefore(image, icBlock.firstChild);	
-		image.src = xmlDoc.getElementsByTagName("svgpath")[i].childNodes[0].nodeValue; 
-		
+		parentElem.insertBefore(gruopName, parentElem.lastChild);
+		gruopName.innerHTML = group[i].getAttribute('name');
+		parentElem.insertBefore(gruopRow, parentElem.lastChild);
+
+		for (var y = 0; y < icons.length; y++) {
+			var icWrapper = document.createElement('div');
+			icWrapper.className = 'ic-wrapper col-md-1 col-sm-2 col-xs-3';
+			var icBlock = document.createElement('div');
+			icBlock.className = 'ic-block';
+			var image = document.createElement('img');
+			gruopRow.insertBefore(icWrapper, gruopRow.firstChild);
+			icWrapper.insertBefore(icBlock, icWrapper.firstChild);
+			icBlock.id = xmlDoc.getElementsByTagName("id")[y].childNodes[0].nodeValue;
+			icBlock.insertBefore(image, icBlock.lastChild);
+			image.src = xmlDoc.getElementsByTagName("svgpath")[y].childNodes[0].nodeValue;
+		}	
 	}
-
+	// ADD TO ALL BLOCKS ONCLICK FUNCTION
 	$('.ic-block').on('click', function () { showMenu(this.id); });
 
 </script>
