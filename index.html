@@ -88,12 +88,23 @@
 			var icBlock = document.createElement('div');
 			icBlock.className = 'ic-block';
 			var image = document.createElement('img');
-			gruopRow.insertBefore(icWrapper, gruopRow.firstChild);
-			icWrapper.insertBefore(icBlock, icWrapper.firstChild);
-			icBlock.id = xmlDoc.getElementsByTagName("id")[y].childNodes[0].nodeValue;
-			icBlock.insertBefore(image, icBlock.lastChild);
-			image.src = xmlDoc.getElementsByTagName("svgpath")[y].childNodes[0].nodeValue;
-		}	
+			image.className = 'ic-image';
+			gruopRow.appendChild(icWrapper);
+			icWrapper.appendChild(icBlock);
+			icBlock.appendChild(image);
+		}
+	}
+	
+	var icBlocks = document.getElementsByClassName("ic-block");
+	var ids = xmlDoc.getElementsByTagName("id");
+	for (var u = 0; u < icBlocks.length; u++) {
+		icBlocks[u].id = ids[u].childNodes[0].nodeValue;
+	}
+
+	var image = document.getElementsByClassName("ic-image");
+	var imageWay = xmlDoc.getElementsByTagName("svgpath");
+	for (var t = 0; t < image.length; t++) {
+		image[t].src = imageWay[t].childNodes[0].nodeValue;
 	}
 	// ADD TO ALL BLOCKS ONCLICK FUNCTION
 	$('.ic-block').on('click', function () { showMenu(this.id); });
